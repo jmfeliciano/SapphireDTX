@@ -1,0 +1,134 @@
+select {
+    border: none;
+    margin-top: 1.6rem;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.467;
+    font-family: "Segoe UI Semibold", Arial, Sans-Serif;
+    background-color: #6fc6db;
+    padding-left: .5rem;
+    padding-right: 1.8rem;
+}
+
+#base_wrapper input[id="curr1"],
+#target_wrapper input[id="curr2"] {
+    background-color: transparent;
+    border: 1px solid #6fc6db;
+    height: 5rem;
+    width: 100%;
+    line-height: 1.2;
+    font-size: 3rem;
+    padding: 10px;
+    color: #757575;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+a:hover {
+    color: #fff;
+}
+
+#signature {
+    margin: 0 auto;
+    color: #fff;
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+}
+
+#main_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: -28px;
+}
+
+#base_wrapper,
+#target_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+#swap {
+    height: 50px;
+    width: 50px;
+    border: none;
+    color: #000;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    margin: auto;
+}
+#history {
+    display:block;
+    margin-left:330px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    /* background-color: #294660; */
+    background-color: #6fc6db;
+    color: #fff;
+    margin-top: 30px;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+#history:hover {
+    background-color: #54a6bb;
+    cursor: pointer;
+}
+.currency{
+    font-size: 18px;
+}
+.currence{
+    position: initial;
+    float: right;
+    margin-right: 9.5em;
+    font-size: 18px; 
+}
+.cryptoimg{
+    display: block;
+    margin: auto;
+}
+.scratch{
+    margin-bottom: -44px;
+}
+@media only screen and (max-width: 768px) {
+    #swap{
+        height: 50px;
+        width: 50px;
+        border: none;
+        color: #000;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        margin: auto;
+   }
+    #history {
+      margin:auto;
+      margin-top: 20px;
+    }
+    .currence{
+        position: initial;
+        float: right;
+        margin-right:0
+    }
+    
+}
+@media only screen and (min-width: 992px){
+    #history {
+        margin-left: 350px;
+     }
+ }

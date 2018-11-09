@@ -1,0 +1,391 @@
+@import 'https://fonts.googleapis.com/css?family=Material+Icons';
+/*------------------------------*/
+/*ALERT BOX*/
+/*------------------------------*/
+div.alert-box {
+    margin: auto;
+    width: 75%;
+    max-height: 75%;
+    padding: 15px;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+    background: darkolivegreen;
+    box-shadow: 0px 0px 15px 0px darkslategray, 0px 0px 15px 0px darkslategray;
+    overflow: auto;
+    z-index: 999999;
+    -webkit-transition: all 2s cubic-bezier(0.5, -0.75, 0.5, 1.75);
+    -o-transition: all 2s cubic-bezier(0.5, -0.75, 0.5, 1.75);
+    -moz-transition: all 2s cubic-bezier(0.5, -0.75, 0.5, 1.75);
+    transition: all 2s cubic-bezier(0.5, -0.75, 0.5, 1.75);
+}
+
+div.alert-box.alert-active {
+    top: 50%;
+    left: 50%;
+}
+
+div.alert-box.end-alert-box {
+    -webkit-transition: all 2s cubic-bezier(0.5, -0.75, 0.5, 1.75), opacity 0.25s linear;
+    -o-transition: all 2s cubic-bezier(0.5, -0.75, 0.5, 1.75), opacity 0.25s linear;
+    -moz-transition: all 2s cubic-bezier(0.5, -0.75, 0.5, 1.75), opacity 0.25s linear;
+    transition: all 2s cubic-bezier(0.5, -0.75, 0.5, 1.75), opacity 0.25s linear;
+}
+
+div.alert-box * {
+    color: white;
+}
+
+div.alert-cover {
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: transparent;
+    z-index: 999998;
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+    -moz-transition: all 2s;
+    transition: all 2s;
+}
+
+div.alert-cover.cover-active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+h1.title-main {
+    margin: 15px;
+    color: olivedrab;
+    border-bottom: 2px solid olivedrab;
+}
+
+h1.title-box {
+    color: white;
+    border-bottom: 2px solid white;
+}
+button {
+    margin: 15px;
+    padding: 15px;
+    border: 2px solid black;
+    background: white;
+    outline: none;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+button.play-btn {
+    width: 80%;
+    margin: 15px auto 15px;
+    color: white;
+    border: 2px solid #39481f;
+    background: #718e3f;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+button.play-btn:hover {
+    background: #39481f;
+    color: #718e3f;
+}
+
+button.play-btn:active {
+    border: 2px solid #1d2410;
+    background: #2b3618;
+    color: #8db14f;
+}
+.two-row {
+    width: 100%;
+    height: auto;
+    display: table;
+    position: relative;
+    border: 2px dashed olivedrab;
+    overflow: auto;
+}
+
+.two-row > div {
+    width: 50%;
+    height: 100%;
+    padding: 15px;
+    display: table-cell;
+    float: left;
+}
+
+.two-row div:nth-child(2):after {
+    clear: left;
+}
+
+@media screen and (max-width: 1000px) {
+    .two-row > div {
+        width: 100%;
+        float: none;
+        display: block;
+    }
+}
+
+/*------------------------------*/
+/*DISPLAY*/
+/*------------------------------*/
+#grid {
+    padding: 30px 0px 30px 0px;
+    display: table;
+    margin: 0 auto;
+}
+
+.piece-line {
+    display: block;
+}
+
+.piece {
+    width: 25px;
+    height: 25px;
+    margin: 2.5px 5px 2.5px 5px;
+    display: inline-block;
+    border-radius: 12.5px;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+.piece.default {
+    background-color: gainsboro;
+}
+
+.piece.red {
+    background-color: tomato;
+}
+
+.piece.blue {
+    background-color: steelblue;
+}
+
+.piece.new {
+    -webkit-transform: scale(1.75, 1.75);
+    -moz-transform: scale(1.75, 1.75);
+      -o-transform: scale(1.75, 1.75);
+         transform: scale(1.75, 1.75);
+}
+
+.piece.selected:before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    display: block;
+    position: relative;
+    top: -15px;
+    left: 2.5px;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid gainsboro;
+    -webkit-animation-name: selected;
+    -moz-animation-name: selected;
+      -o-animation-name: selected;
+         animation-name: selected;
+    -webkit-animation-duration: 0.25s;
+    -moz-animation-duration: 0.25s;
+      -o-animation-duration: 0.25s;
+         animation-duration: 0.25s;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+      -o-animation-direction: alternate;
+         animation-direction: alternate;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+      -o-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+         animation-iteration-count: infinite;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+.piece.selected-red:before {
+    border-top: 10px solid tomato;
+}
+
+.piece.selected-blue:before {
+    border-top: 10px solid steelblue;
+}
+
+.piece.winning-piece {
+    -webkit-animation-name: won;
+    -moz-animation-name: won;
+      -o-animation-name: won;
+         animation-name: won;
+    -webkit-animation-duration: 0.25s;
+    -moz-animation-duration: 0.25s;
+      -o-animation-duration: 0.25s;
+         animation-duration: 0.25s;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+      -o-animation-direction: alternate;
+         animation-direction: alternate;
+    -webkit-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+      -o-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+         animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes selected {
+    from {
+        top: -15px;
+    }
+    to {
+        top: -25px;
+    }
+}
+
+@-moz-keyframes selected {
+    from {
+        top: -15px;
+    }
+    to {
+        top: -25px;
+    }
+}
+
+@-o-keyframes selected {
+    from {
+        top: -15px;
+    }
+    to {
+        top: -25px;
+    }
+}
+
+@keyframes selected {
+    from {
+        top: -15px;
+    }
+    to {
+        top: -25px;
+    }
+}
+
+@-webkit-keyframes won {
+    from {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    to {
+        -webkit-transform: scale(1.75, 1.75);
+        transform: scale(1.75, 1.75);
+    }
+}
+
+@-moz-keyframes won {
+    from {
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+             transform: scale(1, 1);
+    }
+    to {
+        -webkit-transform: scale(1.75, 1.75);
+        -moz-transform: scale(1.75, 1.75);
+             transform: scale(1.75, 1.75);
+    }
+}
+
+@-o-keyframes won {
+    from {
+        -webkit-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+           transform: scale(1, 1);
+    }
+    to {
+        -webkit-transform: scale(1.75, 1.75);
+        -o-transform: scale(1.75, 1.75);
+           transform: scale(1.75, 1.75);
+    }
+}
+
+@keyframes won {
+    from {
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+          -o-transform: scale(1, 1);
+             transform: scale(1, 1);
+    }
+    to {
+        -webkit-transform: scale(1.75, 1.75);
+        -moz-transform: scale(1.75, 1.75);
+          -o-transform: scale(1.75, 1.75);
+             transform: scale(1.75, 1.75);
+    }
+}
+
+/*------------------------------*/
+/*CONTROLS*/
+/*------------------------------*/
+p.controls {
+    width: 90%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: gainsboro;
+    z-index: 10;
+}
+
+p.controls.red {
+    color: tomato;
+}
+
+p.controls.blue {
+    color: steelblue;
+}
+
+p.controls i {
+    filter: alpha(opacity=50);
+    padding: 0px 15px 0px 15px;
+    font-size: 50px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+p.controls i:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+::-webkit-scrollbar-thumb {
+    background: olivedrab;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #658621;
+}
+
+::-webkit-scrollbar-thumb:active {
+    box-shadow: inset 0px 0px 5px #2d3c0f;
+}
+

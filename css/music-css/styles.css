@@ -1,0 +1,24 @@
+img.stretchy {
+	width: 100%; /*Scales image to 150% width of parent container*/
+		transition: transform .2s;
+		display: block;
+    margin-left: auto;
+    margin-right: auto;
+	}
+
+	img.stretchy2 {
+		width: 150%; /*Scales image to 150% width of parent container*/
+			float: left; /*Floats image to left of container - clipping right hand side*/
+			float: right; /* Floats image to right of container - clipping left hand side*/
+			transition: transform .2s;
+		}
+	img.stretchy:hover {
+		transform: scale(1.2);
+		}
+.my-content {
+	color: #1a1a1a;
+	font-weight: bold;
+}
+.btn-info {
+	background-color: #2C3F80 !important;
+}

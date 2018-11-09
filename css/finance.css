@@ -1,0 +1,193 @@
+.box {
+    height: 270px;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    margin: 15px 0 15px 0;
+}
+
+.box .icon-cont {
+    border: 6px solid rgba(43, 43, 43, 0.3);
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    margin: 55px auto;
+    display: block;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+}
+
+.box .icon-cont i {
+    color: #232323;
+    opacity: 0.7;
+    font-size: 2.7em;
+    line-height: 65px;
+}
+
+.box:hover .icon-cont {
+    -webkit-animation: shady 4s linear infinite;
+    animation: shady 4s linear infinite;
+}
+
+@-webkit-keyframes shady {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+    }
+    20% {
+        box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 0px rgba(3, 108, 129, 0);
+    }
+    20.1% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 0px rgba(3, 108, 129, 0);
+    }
+    70.1% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+    }
+}
+
+@keyframes shady {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+    }
+    20% {
+        box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 0px rgba(3, 108, 129, 0);
+    }
+    20.1% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 0px rgba(3, 108, 129, 0);
+    }
+    70.1% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5), 0 0 0 0px rgba(3, 108, 129, 0.5);
+    }
+}
+
+.box h3 {
+    color: #232323;
+    font-family: 'Muli', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    position: absolute;
+    top: 170px;
+    width: 92%;
+    text-align: center;
+    z-index: 4;
+}
+
+.box ul {
+    font-family: 'Muli', sans-serif;
+    color: #232323;
+    font-size: 13px;
+    line-height: 28px;
+    text-indent: 14px;
+    text-align: left;
+    margin: 30px;
+    margin-top: 380px;
+    list-style-type: disc;
+}
+
+.box ul.hidden {
+    opacity: 0;
+}
+
+.box a.expand {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    font-weight: 600;
+    color: #036C81;
+    display: block;
+    margin: 15px auto 25px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+}
+
+.box.selected .icon-cont {
+    -webkit-transform: scale(1.5, 1.5);
+    transform: scale(1.5, 1.5);
+    opacity: 0.3;
+    position: absolute;
+    top: -20px;
+    left: -5px;
+    right: 180px;
+}
+
+.box.selected:hover .icon-cont {
+    -webkit-animation: none;
+    animation: none;
+}
+
+.box.selected h3 {
+    padding: 32px 15px 15px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    width: 70%;
+    top: 16px;
+    left: 10%;
+}
+
+.box.selected ul.hidden {
+    opacity: 1;
+    margin-top: 95px;
+}
+.button{
+    margin: 0 30px 30px 0;
+}
+.chart-page .chart-container {
+    border: black solid 0;
+}
+
+.charts {
+    width: 900px;
+    height: 400px;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+    .charts {
+       width: 400px;
+       height: 300px;
+       margin: 0 auto;
+    }
+}
+
+.btcinfo{
+    background: #151720;
+    padding: 10px;
+    color:#fff;
+}
+.btcparagraph{
+    font-size: 12.5px;
+    font-weight: bold;
+}
+.infograph{
+    margin-bottom: 30px;
+}
