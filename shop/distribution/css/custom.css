@@ -1,0 +1,257 @@
+/* your styles go here */
+/* --------------------------- Carousel --------------------------- */
+
+.contmin {
+    max-width: 70%;
+    min-width: 100%;
+    margin: auto;
+    min-height: 30%;
+}
+
+.carousel-item {
+    max-height: 25rem;
+    width: 100%;
+    /*background-color: #bebebe;*/
+    background-color: transparent;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    top: 3rem;
+    width: 10%;
+}
+
+.carousel-caption {
+    height: 10rem;
+    bottom: 2rem;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    padding: 1.25rem 6rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: inherit;
+}
+
+.carousel-caption h1 {
+    font-size: 1.3rem;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.carousel-caption .btn {
+    font-size: .85rem;
+    line-height: 1.2;
+}
+
+/* ---------------------- Breakpoints for the Carousel ---------------------- */
+
+/* --- EXtra small devices like phones - less than 360px --- */
+
+@media (max-width: 359.9px) {
+    .contmin {
+        max-width: 100%;
+    }
+    .carousel-item {
+        height: 8rem;
+    }
+    .carousel-caption {
+        height: 6rem;
+        bottom: .75rem;
+    }
+    .carousel-caption h1 {
+        font-size: .85rem;
+        font-weight: bold;
+    }
+    .carousel-caption p {
+        font-size: .6rem;
+        font-weight: bold;
+        line-height: 1;
+    }
+    .carousel-caption .btn {
+        font-size: .5rem;
+        line-height: 1;
+    }
+}
+
+/* --- Small devices like phones - starting at 360px ---*/
+
+@media (min-width: 360px) {
+    .contmin {
+        max-width: 100%;
+    }
+    .carousel-item {
+        height: 12rem;
+    }
+    .carousel-caption {
+        height: 9rem;
+    }
+}
+
+/* --- Medium devices like tablets - starting at 600px ---*/
+
+@media (min-width: 600px) {
+    .contmin {
+        max-width: 100%;
+    }
+    .carousel-item {
+        height: 20rem;
+    }
+    .carousel-caption {
+        height: 9rem;
+    }
+}
+
+/* --- Medium devices like tablets - starting at 758px ---*/
+
+@media (min-width: 758px) {
+    .contmin {
+        max-width: 90%;
+    }
+    .carousel-item {
+        height: 24rem;
+    }
+    .carousel-caption {
+        height: 10rem;
+    }
+}
+
+/* --- Tablets, Laptops - starting at 1024px ---*/
+
+@media (min-width: 1024px) {
+    .contmin {
+        max-width: 90%;
+    }
+    .carousel-item {
+        height: 28rem;
+    }
+}
+
+/* --- Tablets, Laptops - starting at 1280px ---*/
+
+@media (min-width: 1280px) {
+    .contmin {
+        max-width: 80%;
+    }
+    .carousel-item {
+        height: 32rem;
+    }
+    .carousel-caption {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+}
+
+/* --- Laptops, Desktops - starting at 1366px ---*/
+
+@media (min-width: 1366px) {
+    .contmin {
+        max-width: 100%;
+    }
+    .carousel-caption {
+        padding-left: 7.5rem;
+        padding-right: 7.5rem;
+    }
+}
+
+/* --------------------------- Carousel END --------------------------- */
+.containerview img{
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+}
+
+.containerview:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, .3);
+}
+
+.button {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.button a {
+    width: 200px;
+    padding: 12px 48px;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+   .button {
+         position: absolute;
+         top: 30px;
+         text-align: center;
+         opacity: 0;
+         transition: opacity .35s ease;
+         }
+    .button a {
+        width: 100%;
+        padding: 12px 12px;
+        font-size: 10px;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        border: solid 2px white;
+        z-index: 1;
+    }
+}
+
+.containerview:hover .button {
+    opacity: 1;
+}
+
+.table {
+	display: table;   
+	margin: 0 auto;
+}
+
+ul#product-tabs {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+}
+    
+ul#product-tabs li {
+    display: inline;
+}
+
+[type='radio'] {
+    display: none !important;
+}
+
+.paymethod-checked {
+    background-color: rgba(0, 157, 220, 0.3);
+}
+
+.payment-col {
+    margin: auto;
+    width: 50%;
+    padding-bottom: 20px;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+
+.payment-col:hover {
+    background-color: rgba(0, 157, 220, 0.3);
+}
